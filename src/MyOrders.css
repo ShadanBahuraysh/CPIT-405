@@ -1,0 +1,27 @@
+.my-orders {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.my-orders input {
+  padding: 0.7rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+}
+
+.my-orders button {
+  padding: 0.7rem 1.2rem;
+  background-color: #256029;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.my-orders p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}

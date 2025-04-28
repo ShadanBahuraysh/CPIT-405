@@ -1,0 +1,256 @@
+/* ======================== */
+/* ====== General Page ===== */
+/* ======================== */
+
+.product-details-page {
+  font-family: 'Arial', sans-serif;
+
+}
+
+/* ======================== */
+/* ====== Product Details ====== */
+/* ======================== */
+
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .product-details-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ===== Images ===== */
+
+.product-images {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.thumbnail-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnail:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* ===== Product Info ===== */
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  color: #2ecc71;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.rating {
+  margin-bottom: 15px;
+  color: #f39c12;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* ===== Seller Card ===== */
+
+.seller-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.seller-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.seller-info h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.seller-info p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.seller-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.contact-btn,
+.wishlist-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.wishlist-btn {
+  background-color: transparent;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+}
+
+/* ===== Request Button ===== */
+
+.request-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.request-btn:hover {
+  background-color: #45a049;
+}
+
+/* ======================== */
+/* ====== Modal Popup ====== */
+/* ======================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Form inside Modal */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+}

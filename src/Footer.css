@@ -1,0 +1,47 @@
+/* ===== Footer ===== */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #256029; /* خلفية خضراء واضحة */
+    color: #ffffff; /* نص الفوتر أبيض */
+    padding: 2rem 1rem 0 1rem; /* padding بدون مسافة تحت */
+    font-size: 0.85rem;
+  }
+
+  .footer div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .footer h4 {
+    font-weight: 600;
+    
+    color: #ffffff; /* عناوين الأقسام أبيض */
+  }
+  
+  .footer a {
+    color: #ffffff; /* روابط الفوتر أبيض */
+    text-decoration: none;
+    display: block;
+   
+    font-weight: 450;
+  }
+  
+  .footer a:hover {
+    color: #c8e6c9; /* لما تمر الماوس عليها يصير لونها أخضر فاتح */
+    text-decoration: underline;
+  }
+  
+  /* ===== Copyright Section ===== */
+  .copyright {
+    background-color: #256029; /* خلفية غامقة لحقوق النشر */
+    text-align: center;
+    padding: 0.8rem 1rem;
+    color: #999999; /* نص رمادي خفيف */
+    font-size: 0.75rem;
+    font-weight: 400;
+    
+  }

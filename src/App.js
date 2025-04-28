@@ -3,18 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import ProductList from './ProductList';
 import ProductDetails from './ProductDetails';
-import Request from './Request';
-import Navbar from './Navbar';
+import MyOrders from './MyOrders';
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/request" element={<Request />} />
+        <Route path="/orders" element={<MyOrders />} />
+       
       </Routes>
     </Router>
   );

@@ -1,0 +1,17 @@
+
+CREATE DATABASE IF NOT EXISTS second_chance;
+
+
+USE second_chance;
+
+
+CREATE TABLE IF NOT EXISTS orders (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  product_id INT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  address TEXT NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  order_code VARCHAR(50) NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

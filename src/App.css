@@ -27,6 +27,18 @@
 .App-link {
   color: #61dafb;
 }
+nav {
+  background-color: transparent;
+  padding: 20px;
+  text-align: right;
+}
+
+nav a {
+  color: green;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -1,25 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ اضفنا useNavigate
+import Header from './Header';
+import Footer from './Footer';
 import './Home.css';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // ✅ داخل الكومبوننت
+
+  // دالة لاختيار 3 منتجات عشوائية
+  const getRandomProducts = (data) => {
+    // نستخدم دالة shuffle لترتيب المنتجات عشوائيًا
+    const shuffled = data.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3); // نأخذ 3 منتجات فقط
+  };
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=3')
+    fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
-      .then(data => setProducts(data))
+      .then(data => setProducts(getRandomProducts(data)))  // تعيين المنتجات العشوائية
       .catch(err => console.error("Error fetching products:", err));
   }, []);
 
+
+
   return (
     <div className="homepage">
-      <header className="header">
-        <h1>Second Chance</h1>
-        <nav>
-          <a href="/products">Products</a>
-          <a href="/request">Request</a>
-        </nav>
-      </header>
+      {/* Navigation Bar */}
+      <Header />
 
       <section className="hero">
         <h2>Welcome to Second Chance</h2>
@@ -48,7 +56,11 @@ export default function Home() {
         <h3>Featured Products</h3>
         <div className="product-grid">
           {products.map((item) => (
-            <div key={item.id} className="product-card">
+            <div
+              key={item.id}
+              className="product-card"
+              onClick={() => navigate(`/products/${item.id}`)} // ✅ هنا التنقل
+            >
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
               <p>{item.description.slice(0, 60)}...</p>
@@ -56,26 +68,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+       
       </section>
 
-      <footer className="footer">
-        <div>
-          <h4>Second Chance</h4>
-          <p>Giving pre-loved items a new home.</p>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <a href="/products">Products</a>
-          <a href="/about">About Us</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div>
-          
-        </div>
-      </footer>
-      <div className="copyright">
-        © 2025 Second Chance. All rights reserved.
-      </div>
+      <Footer />
     </div>
   );
 }
