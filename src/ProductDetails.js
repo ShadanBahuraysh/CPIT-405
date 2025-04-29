@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 import Header from './Header';
 import Footer from './Footer';
+
 function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -11,7 +12,8 @@ function ProductDetails() {
     name: '',
     email: '',
     phone: '',
-    city: '',
+    address: '',   // ← استخدمنا address بدل city
+    productId: ''
   });
 
   useEffect(() => {
@@ -21,7 +23,10 @@ function ProductDetails() {
       .catch((err) => console.error('Error fetching product details:', err));
   }, [id]);
 
-  if (!product) return <div className="loading">Loading...</div>;
+  // تحديث productId
+  useEffect(() => {
+    setFormData((prev) => ({ ...prev, productId: id }));
+  }, [id]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -29,34 +34,34 @@ function ProductDetails() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     fetch('http://localhost/server/submit_order.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData) 
+      body: JSON.stringify(formData)
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log('Server Response:', data);
-      alert('Your request has been submitted successfully!');
-      setIsModalOpen(false);
-    })
-    .catch(err => {
-      console.error('Error submitting request:', err);
-      alert('Something went wrong. Please try again.');
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Server Response:', data);
+        alert('Your request has been submitted successfully!');
+        setIsModalOpen(false);
+      })
+      .catch((err) => {
+        console.error('Error submitting request:', err);
+        alert('Something went wrong. Please try again.');
+      });
   };
-  
+
+  if (!product) return <div className="loading">Loading...</div>;
 
   return (
     <div className="product-details-page">
-<Header />
-      
+      <Header />
+
       {/* Product Details */}
       <div className="product-details-container">
-        {/* Images */}
         <div className="product-images">
           <img src={product.image} alt={product.title} className="main-image" />
           <div className="thumbnail-grid">
@@ -66,20 +71,15 @@ function ProductDetails() {
           </div>
         </div>
 
-        {/* Product Info */}
         <div className="product-info">
           <h2>{product.title}</h2>
-
           <div className="price-section">
             <span className="current-price">${product.price}</span>
             <span className="old-price">${(product.price + 50).toFixed(2)}</span>
           </div>
-
           <div className="rating">★★★★☆ (128 reviews)</div>
-
           <p className="description">{product.description}</p>
 
-          {/* Seller Info */}
           <div className="seller-card">
             <img src="/john-smith.jpg" alt="Seller" className="seller-img" />
             <div className="seller-info">
@@ -92,13 +92,13 @@ function ProductDetails() {
             </div>
           </div>
 
-          {/* Request Button */}
           <button className="request-btn" onClick={() => setIsModalOpen(true)}>
             Request
           </button>
         </div>
       </div>
-{/* Request Modal */}
+
+      {/* Modal Form */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
@@ -130,22 +130,20 @@ function ProductDetails() {
               />
               <input
                 type="text"
-                name="city"
-                placeholder="City"
-                value={formData.city}
+                name="address"   // ← هنا غيرنا الاسم
+                placeholder="Address"
+                value={formData.address}
                 onChange={handleChange}
                 required
               />
               <button type="submit" className="submit-btn">Submit Request</button>
             </form>
-            <button className="close-btn" onClick={() => setIsModalOpen(false)}>
-              Close
-            </button>
+            <button className="close-btn" onClick={() => setIsModalOpen(false)}>Close</button>
           </div>
         </div>
       )}
 
-<Footer />
+      <Footer />
     </div>
   );
 }
