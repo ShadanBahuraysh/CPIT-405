@@ -2,7 +2,7 @@
   "name": "project-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/CPIT-405",
+  "homepage": "https://github.com/ShadanBahuraysh/CPIT-405",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

@@ -38,7 +38,7 @@ Welcome to **ReuseThrift**, a React-based web application that connects users wi
 ![Home Page](screenshots/homepagecontinue.png)
 
 ### 📋 Product List  
-![Product List](screenshots/products.png)
+![Product List](screenshots/h.png)
 
 ### 🛍️ Product Details  
 ![Product Details](screenshots/details.png)
