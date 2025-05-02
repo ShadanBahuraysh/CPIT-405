@@ -45,7 +45,7 @@ function ProductList() {
           <div
             key={product.id}
             className="product-card"
-            onClick={() => navigate(`/products/${product.id}`)}
+            onClick={() => navigate("/products/" + product.id, { state: { product } })}
           >
             <img src={product.image} alt={product.title} />
             <h3>{product.title}</h3>

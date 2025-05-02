@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# ReuseThrift – Second-Hand Fashion Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **ReuseThrift**, a React-based web application that connects users with high-quality second-hand fashion items. This platform promotes sustainability and affordability by allowing users to browse, view details, and request used products easily.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📦 Features
 
-### `npm start`
+- 🛍️ View a curated list of second-hand products
+- 🔍 Explore detailed product information
+- 📝 Submit a request form for items of interest
+- 📱 Responsive layout and accessible design
+- 🔄 Dynamic data loaded from Fake Store API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Technologies Used
 
-### `npm test`
+- **React** (with functional components and hooks)
+- **React Router DOM** for navigation
+- **Fetch API** for retrieving product data
+- **HTML5 & CSS3** (with semantic tags and responsive styles)
+- **JavaScript ES6+**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Installation & Running Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/CPIT-405.git
+   cd CPIT-405
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ## 🖼️ Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🏠 Home Page  
+![Home Page](screenshots/homepage.png)
+![Home Page](screenshots/homepagecontinue.png)
 
-### `npm run eject`
+### 📋 Product List  
+![Product List](screenshots/products.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛍️ Product Details  
+![Product Details](screenshots/details.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 📤 Request Modal  
+![Modal Form](screenshots/modal.png)
