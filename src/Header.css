@@ -1,29 +1,36 @@
- 
-  /* Header */
-  .header {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  .header h1 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #256029;
-  }
-  .header nav a {
-    margin-left: 1rem;
-    color: #256029;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .header nav a:hover {
-    text-decoration: underline;
-  }
-  .logo {
-    width: 200px; /* 👈 تصغير عرض اللوجو */
-    height: auto;
-    object-fit: contain;
-  }
+/* Styling for the main header section */
+.header {
+  background-color: #ffffff; /* White background for a clean appearance */
+  display: flex; /* Flexbox to arrange logo and navigation horizontally */
+  justify-content: space-between; /* Space between logo and nav links */
+  align-items: center; /* Vertically center the content */
+  padding: 1rem 2rem; /* Space inside the header (top/bottom: 1rem, sides: 2rem) */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth effect */
+}
+
+/* Styling for the site title inside the header */
+.header h1 {
+  font-size: 1.2rem; /* Set the size of the title text */
+  font-weight: bold; /* Make the title bold */
+  color: #256029; /* Green color to match the site theme */
+}
+
+/* Styling for navigation links inside the header */
+.header nav a {
+  margin-left: 1rem; /* Space between links */
+  color: #256029; /* Match the link color with the theme */
+  text-decoration: none; /* Remove underline by default */
+  font-size: 0.9rem; /* Slightly smaller text for nav links */
+}
+
+/* Hover effect for navigation links */
+.header nav a:hover {
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* Styling for the logo image inside the header */
+.logo {
+  width: 200px; /* Set logo width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure logo fits nicely within bounds */
+}
