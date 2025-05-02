@@ -1,83 +1,81 @@
-/* ======================== */
-/* ====== General Page ===== */
-/* ======================== */
-
+/* General font style applied to the product details page */
 .product-details-page {
   font-family: 'Arial', sans-serif;
-
 }
 
-/* ======================== */
-/* ====== Product Details ====== */
-/* ======================== */
-
+/* Main container for the product page content */
 .product-details-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  display: flex;                    /* Use flexbox for layout */
+  flex-direction: column;          /* Stack elements vertically by default */
+  gap: 30px;                        /* Add spacing between child elements */
+  align-items: center;             /* Center items horizontally */
   padding: 20px;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1200px;               /* Limit page width for readability */
+  margin: auto;                    /* Center the container on the page */
 }
 
+/* Responsive layout: switch to horizontal layout on large screens */
 @media (min-width: 1024px) {
   .product-details-container {
-    flex-direction: row;
+    flex-direction: row;           /* Arrange elements side-by-side */
     align-items: flex-start;
   }
 }
 
-/* ===== Images ===== */
-
+/* Container for product images (main image and thumbnails) */
 .product-images {
-  flex: 0 0 350px;
+  flex: 0 0 350px;                 /* Fixed width for image section */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;         /* Stack image and thumbnails */
   align-items: center;
 }
 
+/* Styling the main product image */
 .main-image {
   width: 100%;
   max-width: 350px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 12px;            /* Rounded corners */
   margin-bottom: 15px;
-  object-fit: cover;
+  object-fit: cover;              /* Maintain image aspect ratio and crop if needed */
 }
 
+/* Container for thumbnail images */
 .thumbnail-grid {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;        /* Center the thumbnails */
+  flex-wrap: wrap;                /* Allow thumbnails to wrap to next line */
+  gap: 10px;                      /* Spacing between thumbnails */
 }
 
+/* Each thumbnail image style */
 .thumbnail {
   width: 70px;
   height: 70px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: border 0.3s;
+  border: 2px solid transparent;  /* Default border */
+  transition: border 0.3s;        /* Smooth border change on hover */
 }
 
+/* Highlight thumbnail when hovered */
 .thumbnail:hover {
-  border: 2px solid #4CAF50;
+  border: 2px solid #4CAF50;      /* Green border on hover */
 }
 
-/* ===== Product Info ===== */
-
+/* Container for product information (title, price, etc.) */
 .product-info {
-  flex: 1;
+  flex: 1;                        /* Take remaining horizontal space */
 }
 
+/* Product title */
 .product-info h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
+/* Layout for displaying price information */
 .price-section {
   display: flex;
   align-items: center;
@@ -85,30 +83,33 @@
   margin-bottom: 10px;
 }
 
+/* Current product price */
 .current-price {
-  color: #2ecc71;
+  color: #2ecc71;                 /* Green color for active price */
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Old (discounted) price */
 .old-price {
-  text-decoration: line-through;
+  text-decoration: line-through;  /* Line through to indicate discount */
   color: #aaa;
 }
 
+/* Star rating display */
 .rating {
   margin-bottom: 15px;
-  color: #f39c12;
+  color: #f39c12;                 /* Orange color for stars */
 }
 
+/* Product description text */
 .description {
   color: #555;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 1.6;               /* Improve readability */
 }
 
-/* ===== Seller Card ===== */
-
+/* Card showing seller information */
 .seller-card {
   display: flex;
   align-items: center;
@@ -118,14 +119,16 @@
   background-color: #f9f9f9;
 }
 
+/* Seller profile image */
 .seller-img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%;            /* Make image circular */
   object-fit: cover;
   margin-right: 15px;
 }
 
+/* Text section of the seller card */
 .seller-info h4 {
   margin: 0;
   font-weight: 600;
@@ -137,12 +140,14 @@
   color: #777;
 }
 
+/* Action buttons for seller section (e.g. contact, wishlist) */
 .seller-actions {
-  margin-left: auto;
+  margin-left: auto;              /* Push actions to the right */
   display: flex;
   gap: 10px;
 }
 
+/* Shared button styles */
 .contact-btn,
 .wishlist-btn {
   padding: 8px 12px;
@@ -152,19 +157,20 @@
   border: none;
 }
 
+/* Contact button style */
 .contact-btn {
   background-color: #4CAF50;
   color: white;
 }
 
+/* Wishlist button with outlined style */
 .wishlist-btn {
   background-color: transparent;
   border: 1px solid #4CAF50;
   color: #4CAF50;
 }
 
-/* ===== Request Button ===== */
-
+/* Button to request the product */
 .request-btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -177,27 +183,26 @@
   transition: background 0.3s;
 }
 
+/* Change background color on hover */
 .request-btn:hover {
   background-color: #45a049;
 }
 
-/* ======================== */
-/* ====== Modal Popup ====== */
-/* ======================== */
-
+/* Modal background overlay (appears behind the popup) */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 999;                   /* Ensure it's above everything */
 }
 
+/* Modal popup container */
 .modal {
   background: white;
   padding: 30px;
@@ -208,19 +213,21 @@
   position: relative;
 }
 
+/* Modal title */
 .modal h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
   text-align: center;
 }
 
-/* Form inside Modal */
+/* Form layout inside the modal */
 .request-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Input fields inside the modal */
 .request-form input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -228,6 +235,7 @@
   font-size: 1rem;
 }
 
+/* Submit button inside modal */
 .submit-btn {
   background-color: #4CAF50;
   color: white;
@@ -239,11 +247,12 @@
   transition: background 0.3s;
 }
 
+/* Hover effect for submit button */
 .submit-btn:hover {
   background-color: #45a049;
 }
 
-/* Close Button */
+/* Button to close the modal */
 .close-btn {
   position: absolute;
   top: 10px;
