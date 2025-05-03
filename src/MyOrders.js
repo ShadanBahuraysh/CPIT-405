@@ -4,13 +4,20 @@ import Header from './Header';
 import Footer from './Footer';
 
 export default function MyOrders() {
+  // State to hold the user's entered order code
   const [orderCode, setOrderCode] = useState('');
+
+   // State to store order details returned from the server
   const [orderInfo, setOrderInfo] = useState(null);
+
+   // State to track if no matching order was found
   const [notFound, setNotFound] = useState(false);
 
+   // Handle form submission to search for an order
   const handleSearch = (e) => {
     e.preventDefault();
 
+    // Send POST request with JSON payload to check_order endpoint
     fetch('http://localhost/server/check_order.php', {
       method: 'POST',
       headers: {
@@ -21,9 +28,11 @@ export default function MyOrders() {
       .then(res => res.json())
       .then(data => {
         if (data.found) {
+           // If order is found, store the details and clear any "not found" message
           setOrderInfo(data.order);
           setNotFound(false);
         } else {
+          // If no order, clear existing details and show "not found" message
           setOrderInfo(null);
           setNotFound(true);
         }
@@ -39,6 +48,8 @@ export default function MyOrders() {
       
       <div className="my-orders">
         <h2>Track Your Order</h2>
+
+     {/* Form to submit the order code */}
         <form onSubmit={handleSearch}>
           <input
             type="text"
@@ -49,7 +60,7 @@ export default function MyOrders() {
           />
           <button type="submit">Search</button>
         </form>
-
+        {/* Display order details if found */}
         {orderInfo && (
           <div className="order-info">
             <h3>Order Details:</h3>
@@ -61,7 +72,7 @@ export default function MyOrders() {
             <p><strong>Order Code:</strong> {orderInfo.order_code}</p>
           </div>
         )}
-
+        {/* Display a message if no order was found */}
         {notFound && (
           <p className="not-found">Order not found. Please check your code.</p>
         )}
