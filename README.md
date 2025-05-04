@@ -100,7 +100,8 @@ Run this in **phpMyAdmin** (MySQL)
 
 ---
 
-📚 References
+##📚 References
+
 PHPMailer – Send Emails via SMTP in PHP
 https://github.com/PHPMailer/PHPMailer
 

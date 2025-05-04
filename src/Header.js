@@ -11,7 +11,7 @@ function Header() {
 
       {/*//======================== WEBSITE LOGO SECTION =========================*/}
       {/* Displays the website's logo image */}
-      <img src="/chancelogo.png" alt="Second Chance Logo" className="logo" />
+      <img src={`${process.env.PUBLIC_URL}/chancelogo.png`} alt="Second Chance Logo" className="logo" />
 
       {/*======================== NAVIGATION MENU =========================*/}
       {/* Navigation bar with internal links using React Router */}
