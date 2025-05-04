@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CPIT-405/static/css/main.71b76211.css",
+    "main.js": "/CPIT-405/static/js/main.2c7b8818.js",
+    "index.html": "/CPIT-405/index.html",
+    "main.71b76211.css.map": "/CPIT-405/static/css/main.71b76211.css.map",
+    "main.2c7b8818.js.map": "/CPIT-405/static/js/main.2c7b8818.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71b76211.css",
+    "static/js/main.2c7b8818.js"
+  ]
+}
