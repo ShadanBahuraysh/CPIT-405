@@ -20,7 +20,7 @@ function App() {
     <Router>
       {/* Header is shown on all pages */}
       <Header />
-
+      
       {/* Defines the routes for different pages of the app */}
       <Routes>
         {/* Route for the home page */}
