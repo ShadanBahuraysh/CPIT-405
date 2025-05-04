@@ -1,18 +1,27 @@
+App.css
+
+/*======================== GENERAL APP CONTAINER =========================*/
 .App {
   text-align: center;
 }
 
+
+/*======================== REACT LOGO STYLING =========================*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+
+/*======================== REACT LOGO ANIMATION =========================*/
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+
+/*======================== MAIN APP HEADER =========================*/
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +33,22 @@
   color: white;
 }
 
+
+/*======================== LINK STYLING IN HEADER =========================*/
 .App-link {
   color: #61dafb;
 }
+
+
+/*======================== NAVIGATION BAR CONTAINER =========================*/
 nav {
   background-color: transparent;
   padding: 20px;
   text-align: right;
 }
 
+
+/*======================== NAVIGATION LINKS =========================*/
 nav a {
   color: green;
   text-decoration: none;
@@ -40,6 +56,8 @@ nav a {
   font-weight: bold;
 }
 
+
+/*======================== REACT LOGO SPIN ANIMATION KEYFRAMES =========================*/
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

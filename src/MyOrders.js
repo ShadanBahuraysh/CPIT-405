@@ -1,55 +1,57 @@
 import './MyOrders.css';
 import React, { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
 
+
+//======================== MY ORDERS COMPONENT =========================
 export default function MyOrders() {
-  // State to hold the user's entered order code
+  //======================== STATE HOOKS =========================
+  // Holds the user’s entered order code
   const [orderCode, setOrderCode] = useState('');
 
-   // State to store order details returned from the server
+  // Holds order details fetched from the server
   const [orderInfo, setOrderInfo] = useState(null);
 
-   // State to track if no matching order was found
+  // Tracks whether the order was not found
   const [notFound, setNotFound] = useState(false);
 
-   // Handle form submission to search for an order
+
+  //======================== HANDLE FORM SUBMISSION =========================
+  // Sends a POST request with the order code to the backend and processes the response
   const handleSearch = (e) => {
     e.preventDefault();
 
-    // Send POST request with JSON payload to check_order endpoint
     fetch('http://localhost/server/check_order.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ order_code: orderCode })
+      body: JSON.stringify({ order_code: orderCode }) // Sends the order code as JSON
     })
       .then(res => res.json())
       .then(data => {
         if (data.found) {
-           // If order is found, store the details and clear any "not found" message
+          // If a matching order is found, update the order info and reset the "not found" flag
           setOrderInfo(data.order);
           setNotFound(false);
         } else {
-          // If no order, clear existing details and show "not found" message
+          // If no order is found, clear any previous info and set the "not found" flag
           setOrderInfo(null);
           setNotFound(true);
         }
       })
       .catch(err => {
-        console.error('Error fetching order:', err);
+        console.error('Error fetching order:', err); // Log any network or parsing errors
       });
   };
 
+
+  //======================== RENDER FORM AND RESULTS =========================
   return (
     <div className="homepage">
-      <Header />
-      
       <div className="my-orders">
         <h2>Track Your Order</h2>
 
-     {/* Form to submit the order code */}
+        {/* Input form to enter and submit order code */}
         <form onSubmit={handleSearch}>
           <input
             type="text"
@@ -60,7 +62,8 @@ export default function MyOrders() {
           />
           <button type="submit">Search</button>
         </form>
-        {/* Display order details if found */}
+
+        {/* If order info is available, display the order details */}
         {orderInfo && (
           <div className="order-info">
             <h3>Order Details:</h3>
@@ -72,13 +75,12 @@ export default function MyOrders() {
             <p><strong>Order Code:</strong> {orderInfo.order_code}</p>
           </div>
         )}
-        {/* Display a message if no order was found */}
+
+        {/* If no matching order is found, show an error message */}
         {notFound && (
           <p className="not-found">Order not found. Please check your code.</p>
         )}
       </div>
-
-      <Footer />
     </div>
   );
 }

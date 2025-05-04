@@ -1,40 +1,45 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ اضفنا useNavigate
-import Header from './Header';
-import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
+
+//======================== HOME PAGE COMPONENT =========================
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const navigate = useNavigate(); // ✅ داخل الكومبوننت
+  const navigate = useNavigate(); // Hook used for programmatic navigation
 
-  // دالة لاختيار 3 منتجات عشوائية
+
+  //======================== FUNCTION TO SELECT RANDOM PRODUCTS =========================
+  // Takes an array of products and returns 3 randomly selected items
   const getRandomProducts = (data) => {
-    // نستخدم دالة shuffle لترتيب المنتجات عشوائيًا
-    const shuffled = data.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 3); // نأخذ 3 منتجات فقط
+    const shuffled = data.sort(() => 0.5 - Math.random()); // Randomly shuffle array
+    return shuffled.slice(0, 3); // Return only the first 3 items
   };
 
+
+  //======================== FETCH DATA FROM API ON PAGE LOAD =========================
+  // Fetches product data once when the component is mounted, then sets 3 random products
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
-      .then(data => setProducts(getRandomProducts(data)))  // تعيين المنتجات العشوائية
+      .then(data => setProducts(getRandomProducts(data)))  // Set the featured products
       .catch(err => console.error("Error fetching products:", err));
   }, []);
 
 
-
+  //======================== RENDERING THE PAGE LAYOUT =========================
   return (
     <div className="homepage">
-      {/* Navigation Bar */}
-      <Header />
 
+      {/* Hero section with welcome message and call-to-action */}
       <section className="hero">
         <h2>Welcome to Second Chance</h2>
         <p>Give Items a New Life — Browse, Request, and Reuse</p>
         <a href="/products" className="button">Browse Products</a>
       </section>
 
+       {/*======================== STEP-BY-STEP USER FLOW VISUAL =========================*/}
+      {/* Icons and labels to explain the user process: Browse → Request → Reuse */}
       <section className="steps">
         <div>
           <span role="img" aria-label="browse">🔍</span>
@@ -52,6 +57,8 @@ export default function Home() {
         </div>
       </section>
 
+      {/*======================== FEATURED PRODUCTS SECTION =========================*/}
+      {/* Displaying 3 randomly selected products from the API */}
       <section className="featured">
         <h3>Featured Products</h3>
         <div className="product-grid">
@@ -59,19 +66,17 @@ export default function Home() {
             <div
               key={item.id}
               className="product-card"
-              onClick={() => navigate(`/products/${item.id}`)} // ✅ هنا التنقل
+              onClick={() => navigate(`/products/${item.id}`)} // Navigate to product details on click
             >
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
-              <p>{item.description.slice(0, 60)}...</p>
+              <p>{item.description.slice(0, 60)}...</p> {/* Short preview of the description */}
               <p className="price">${item.price}</p>
             </div>
           ))}
         </div>
-       
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,8 +1,11 @@
+/*======================== MAIN CONTAINER =========================*/
 .my-orders {
   text-align: center;
   padding: 4rem 1rem;
 }
 
+
+/*======================== FORM INPUT FIELD =========================*/
 .my-orders input {
   padding: 0.7rem;
   width: 250px;
@@ -11,6 +14,8 @@
   margin-right: 0.5rem;
 }
 
+
+/*======================== FORM SUBMIT BUTTON =========================*/
 .my-orders button {
   padding: 0.7rem 1.2rem;
   background-color: #256029;
@@ -20,8 +25,36 @@
   font-weight: bold;
 }
 
+
+/*======================== GENERAL PARAGRAPH STYLING =========================*/
 .my-orders p {
   margin-top: 1.5rem;
   font-size: 1rem;
   color: #333;
+}
+
+
+/*======================== ORDER INFO BLOCK (CENTERED) =========================*/
+.order-info {
+  text-align: left;
+  margin: 2rem auto;
+  width: 400px;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/*======================== INDIVIDUAL ORDER INFO FIELDS =========================*/
+.order-info p {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -1,81 +1,83 @@
-/* General font style applied to the product details page */
+/*======================== PAGE-WIDE BASE STYLING =========================*/
 .product-details-page {
   font-family: 'Arial', sans-serif;
 }
 
-/* Main container for the product page content */
+
+/*======================== MAIN PRODUCT CONTAINER =========================*/
 .product-details-container {
-  display: flex;                    /* Use flexbox for layout */
-  flex-direction: column;          /* Stack elements vertically by default */
-  gap: 30px;                        /* Add spacing between child elements */
-  align-items: center;             /* Center items horizontally */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
   padding: 20px;
-  max-width: 1200px;               /* Limit page width for readability */
-  margin: auto;                    /* Center the container on the page */
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Responsive layout: switch to horizontal layout on large screens */
+
+/*======================== RESPONSIVE LAYOUT FOR LARGER SCREENS =========================*/
 @media (min-width: 1024px) {
   .product-details-container {
-    flex-direction: row;           /* Arrange elements side-by-side */
+    flex-direction: row;
     align-items: flex-start;
   }
 }
 
-/* Container for product images (main image and thumbnails) */
+
+/*======================== PRODUCT IMAGE SECTION =========================*/
 .product-images {
-  flex: 0 0 350px;                 /* Fixed width for image section */
+  flex: 0 0 350px;
   display: flex;
-  flex-direction: column;         /* Stack image and thumbnails */
+  flex-direction: column;
   align-items: center;
 }
 
-/* Styling the main product image */
 .main-image {
   width: 100%;
   max-width: 350px;
   height: auto;
-  border-radius: 12px;            /* Rounded corners */
+  border-radius: 12px;
   margin-bottom: 15px;
-  object-fit: cover;              /* Maintain image aspect ratio and crop if needed */
+  object-fit: cover;
 }
 
-/* Container for thumbnail images */
+
+/*======================== THUMBNAIL STYLING =========================*/
 .thumbnail-grid {
   display: flex;
-  justify-content: center;        /* Center the thumbnails */
-  flex-wrap: wrap;                /* Allow thumbnails to wrap to next line */
-  gap: 10px;                      /* Spacing between thumbnails */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Each thumbnail image style */
 .thumbnail {
   width: 70px;
   height: 70px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  border: 2px solid transparent;  /* Default border */
-  transition: border 0.3s;        /* Smooth border change on hover */
+  border: 2px solid transparent;
+  transition: border 0.3s;
 }
 
-/* Highlight thumbnail when hovered */
 .thumbnail:hover {
-  border: 2px solid #4CAF50;      /* Green border on hover */
+  border: 2px solid #4CAF50;
 }
 
-/* Container for product information (title, price, etc.) */
+
+/*======================== PRODUCT INFORMATION SECTION =========================*/
 .product-info {
-  flex: 1;                        /* Take remaining horizontal space */
+  flex: 1;
 }
 
-/* Product title */
 .product-info h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-/* Layout for displaying price information */
+
+/*======================== PRICE DISPLAY =========================*/
 .price-section {
   display: flex;
   align-items: center;
@@ -83,33 +85,32 @@
   margin-bottom: 10px;
 }
 
-/* Current product price */
 .current-price {
-  color: #2ecc71;                 /* Green color for active price */
+  color: #2ecc71;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Old (discounted) price */
 .old-price {
-  text-decoration: line-through;  /* Line through to indicate discount */
+  text-decoration: line-through;
   color: #aaa;
 }
 
-/* Star rating display */
+
+/*======================== STAR RATING AND DESCRIPTION =========================*/
 .rating {
   margin-bottom: 15px;
-  color: #f39c12;                 /* Orange color for stars */
+  color: #f39c12;
 }
 
-/* Product description text */
 .description {
   color: #555;
   margin-bottom: 30px;
-  line-height: 1.6;               /* Improve readability */
+  line-height: 1.6;
 }
 
-/* Card showing seller information */
+
+/*======================== SELLER INFO CARD =========================*/
 .seller-card {
   display: flex;
   align-items: center;
@@ -119,16 +120,14 @@
   background-color: #f9f9f9;
 }
 
-/* Seller profile image */
 .seller-img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;            /* Make image circular */
+  border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
 }
 
-/* Text section of the seller card */
 .seller-info h4 {
   margin: 0;
   font-weight: 600;
@@ -140,14 +139,14 @@
   color: #777;
 }
 
-/* Action buttons for seller section (e.g. contact, wishlist) */
+
+/*======================== SELLER ACTION BUTTONS =========================*/
 .seller-actions {
-  margin-left: auto;              /* Push actions to the right */
+  margin-left: auto;
   display: flex;
   gap: 10px;
 }
 
-/* Shared button styles */
 .contact-btn,
 .wishlist-btn {
   padding: 8px 12px;
@@ -157,20 +156,19 @@
   border: none;
 }
 
-/* Contact button style */
 .contact-btn {
   background-color: #4CAF50;
   color: white;
 }
 
-/* Wishlist button with outlined style */
 .wishlist-btn {
   background-color: transparent;
   border: 1px solid #4CAF50;
   color: #4CAF50;
 }
 
-/* Button to request the product */
+
+/*======================== REQUEST BUTTON =========================*/
 .request-btn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -183,26 +181,25 @@
   transition: background 0.3s;
 }
 
-/* Change background color on hover */
 .request-btn:hover {
   background-color: #45a049;
 }
 
-/* Modal background overlay (appears behind the popup) */
+
+/*======================== MODAL OVERLAY AND CONTAINER =========================*/
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;                   /* Ensure it's above everything */
+  z-index: 999;
 }
 
-/* Modal popup container */
 .modal {
   background: white;
   padding: 30px;
@@ -213,21 +210,20 @@
   position: relative;
 }
 
-/* Modal title */
+
+/*======================== MODAL CONTENT =========================*/
 .modal h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
   text-align: center;
 }
 
-/* Form layout inside the modal */
 .request-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Input fields inside the modal */
 .request-form input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -235,9 +231,7 @@
   font-size: 1rem;
 }
 
-/* Submit button inside modal */
-.submit-btn {
-  background-color: #4CAF50;
+.submit-btn {background-color: #4CAF50;
   color: white;
   padding: 10px;
   font-size: 1rem;
@@ -247,12 +241,12 @@
   transition: background 0.3s;
 }
 
-/* Hover effect for submit button */
 .submit-btn:hover {
   background-color: #45a049;
 }
 
-/* Button to close the modal */
+
+/*======================== CLOSE MODAL BUTTON =========================*/
 .close-btn {
   position: absolute;
   top: 10px;

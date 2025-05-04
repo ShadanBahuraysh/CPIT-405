@@ -1,48 +1,70 @@
-/* Main footer section styling */
+/*======================== MAIN FOOTER CONTAINER =========================*/
 .footer {
-    display: flex; /* Arrange items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to a new line if needed */
-    justify-content: space-around; /* Evenly distribute space between items */
-    align-items: flex-start; /* Align items to the top */
-    background-color: #256029; /* Dark green background for the footer */
-    color: #ffffff; /* Set text color to white */
-    padding: 2rem 1rem 0 1rem; /* Internal spacing (no bottom padding) */
-    font-size: 0.85rem; /* Slightly smaller font size */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #256029;
+    color: #ffffff;
+    padding: 2rem 1rem 0 1rem;
+    font-size: 0.85rem;
 }
 
-/* Styling for each column inside the footer */
+
+/*======================== FOOTER COLUMN LAYOUT =========================*/
 .footer div {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack child elements vertically */
-    margin-bottom: 1rem; /* Space below each footer column */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
-/* Footer section headings */
+
+/*======================== FOOTER SECTION HEADINGS =========================*/
 .footer h4 {
-    font-weight: 600; /* Semi-bold text */
-    color: #ffffff; /* White color for section titles */
+    font-weight: 600;
+    color: #ffffff;
 }
 
-/* Footer links styling */
+
+/*======================== FOOTER LINKS =========================*/
 .footer a {
-    color: #ffffff; /* White text for links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Display links as block elements */
-    font-weight: 450; /* Medium font weight */
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-weight: 450;
 }
 
-/* Hover effect for footer links */
+
+/*======================== FOOTER LINK HOVER EFFECT =========================*/
 .footer a:hover {
-    color: #c8e6c9; /* Light green color on hover */
-    text-decoration: underline; /* Underline the link on hover */
+    color: #c8e6c9;
+    text-decoration: underline;
 }
 
-/* Styling for copyright section */
+/*======================== Style buttons in footer =========================*/
+.footer button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font: inherit;
+    padding: 0;
+    margin: 0.1rem 0;
+    text-align: left;
+    cursor: pointer;
+  }
+  /*======================== Style buttons in footer (hover) =========================*/
+  .footer button:hover {
+    color: #c8e6c9;
+    text-decoration: underline;
+  }
+
+
+/*======================== COPYRIGHT BAR =========================*/
 .copyright {
-    background-color: #256029; /* Same green background as footer */
-    text-align: center; /* Center the text */
-    padding: 0.8rem 1rem; /* Padding around the content */
-    color: #999999; /* Light gray text color */
-    font-size: 0.75rem; /* Small font size */
-    font-weight: 400; /* Normal font weight */
+    background-color: #256029;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    color: #999999;
+    font-size: 0.75rem;
+    font-weight: 400;
 }

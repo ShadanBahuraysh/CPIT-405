@@ -1,6 +1,4 @@
-
-/* HomePage.css */
-
+/*======================== GLOBAL PAGE STYLING =========================*/
 body, html {
   margin: 0;
   padding: 0;
@@ -14,19 +12,23 @@ body, html {
   min-height: 100vh;
 }
 
-/* Hero Section */
+
+/*======================== HERO SECTION =========================*/
 .hero {
   text-align: center;
   padding: 3rem 1rem;
 }
+
 .hero h2 {
   font-size: 2rem;
   color: #256029;
 }
+
 .hero p {
   margin: 0.5rem 0 1rem;
   color: #4d7c50;
 }
+
 .button {
   background-color: #2e7d32;
   color: white;
@@ -36,11 +38,13 @@ body, html {
   font-size: 0.9rem;
   transition: background-color 0.3s;
 }
+
 .button:hover {
   background-color: #256029;
 }
 
-/* Steps Icons Section */
+
+/*======================== STEP-BY-STEP ICON SECTION =========================*/
 .steps {
   display: flex;
   justify-content: space-around;
@@ -50,28 +54,35 @@ body, html {
   text-align: center;
   background-color: white;
 }
+
 .steps div p {
   margin-top: 0.5rem;
   font-weight: 500;
 }
 
-/* Featured Products */
+
+/*======================== FEATURED PRODUCTS SECTION =========================*/
 .featured {
   padding: 2rem 1rem;
   background-color: #e6f4ea;
   text-align: center;
 }
+
 .featured h3 {
   font-size: 1.2rem;
   color: #256029;
   margin-bottom: 2rem;
 }
+
+
+/*======================== PRODUCT GRID AND CARDS =========================*/
 .product-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 }
+
 .product-card {
   background-color: white;
   width: 220px;
@@ -80,24 +91,26 @@ body, html {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: left;
 }
+
 .product-card img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
+
 .product-card h4 {
   margin: 0 0 0.5rem;
   font-weight: 600;
   color: #333;
 }
+
 .product-card p {
   font-size: 0.85rem;
   color: #555;
 }
+
 .price {
   font-weight: bold;
   margin-top: 0.5rem;
   color: #256029;
 }
-
-

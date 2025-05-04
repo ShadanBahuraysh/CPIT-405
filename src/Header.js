@@ -2,23 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Import external CSS for header styling
 
+
+//======================== HEADER COMPONENT WITH LOGO AND NAVIGATION =========================
 function Header() {
   return (
-    // Main header container
+    //======================== HEADER CONTAINER =========================
     <header className="header">
 
-      {/* Website logo on the left side */}
-      <img 
-        src="/chancelogo.png" 
-        alt="Second Chance Logo" 
-        className="logo" 
-      />
+      {/*//======================== WEBSITE LOGO SECTION =========================*/}
+      {/* Displays the website's logo image */}
+      <img src="/chancelogo.png" alt="Second Chance Logo" className="logo" />
 
-      {/* Navigation menu with internal routing */}
+      {/*======================== NAVIGATION MENU =========================*/}
+      {/* Navigation bar with internal links using React Router */}
       <nav>
-        <Link to="/">Home</Link>           {/* Link to homepage */}
-        <Link to="/products">Products</Link>   {/* Link to products page */}
-        <Link to="/orders">My Orders</Link>   {/* Link to user's orders */}
+        <Link to="/">Home</Link>           {/* Navigates to homepage */}
+        <Link to="/products">Products</Link>   {/* Navigates to products listing */}
+        <Link to="/orders">My Orders</Link>   {/* Navigates to user's order history */}
       </nav>
 
     </header>
