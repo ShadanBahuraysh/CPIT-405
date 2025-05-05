@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css'; // Importing the external CSS file for footer design
 
 
@@ -16,9 +17,9 @@ function Footer() {
         {/* First column: Quick navigation links */}
         <div>
           <h3>Quick Links</h3>
-          <a href="/">Home</a>         {/* Navigates to the homepage */}
-          <a href="/products">Products</a> {/* Navigates to the products page */}
-          <a href="/orders">My Orders</a>  {/* Navigates to the user's order history */}
+          <Link to="/">Home</Link>         {/* Navigates to the homepage */}
+          <Link to="/products">Products</Link> {/* Navigates to the products page */}
+          <Link to="/orders">My Orders</Link>  {/* Navigates to the user's order history */}
         </div>
 
         {/*======================== CATEGORIES COLUMN =========================*/}

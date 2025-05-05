@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Home.css';
 
 
@@ -35,7 +35,7 @@ export default function Home() {
       <section className="hero">
         <h2>Welcome to Second Chance</h2>
         <p>Give Items a New Life — Browse, Request, and Reuse</p>
-        <a href="/products" className="button">Browse Products</a>
+        <Link to ="/products" className="button">Browse Products</Link>
       </section>
 
        {/*======================== STEP-BY-STEP USER FLOW VISUAL =========================*/}
