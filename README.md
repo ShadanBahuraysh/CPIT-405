@@ -5,3 +5,4 @@
 📌 **Note:** The complete project files are located in the **`master`** branch.  
 Switch to the `master` branch to view the full source code and documentation.
 
+🌐 **Live Demo:** [View on GitHub Pages](https://shadanbahuraysh.github.io/CPIT-405)
