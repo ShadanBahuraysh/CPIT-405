@@ -17,7 +17,7 @@ import Footer from './Footer';
 function App() {
   return (
     // Wraps the entire app in routing context so navigation between pages works
-    <Router>
+    <Router basename="/CPIT-405">
       {/* Header is shown on all pages */}
       <Header />
       
